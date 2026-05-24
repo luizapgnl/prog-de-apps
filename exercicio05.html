@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 5</title>
+</head>
+<body>
+    <label for="">Nome</label>
+    <input type="text" name="" id="inp_nome" placeholder="Digite seu nome">
+
+    <button onclick="mostrar_nome()">Clicar</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        function mostrar_nome(){
+            let nome = document.getElementById("inp_nome").value
+
+            if (nome == ""){
+                document.getElementById("resultado").textContent = "Por favor, preencha o campo nome"
+            }
+            else{
+                document.getElementById("resultado").textContent = `Nome: ${nome}`
+            }
+        }
+    </script>
+</body>
+</html>

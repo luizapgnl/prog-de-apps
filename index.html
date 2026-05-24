@@ -1,18 +1,76 @@
-index.htlm
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Aula 02</title>
+    <title>Gerador de Cartão Glass</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <h1> Ana Luiza</h1>
-    <p>Eu sou uma estudante de Desenvolvimento de Sistemas</p>
-    <p>Eu gosto de tocar guitarra</p>
-    <p><strong>O meu sonho é que o Corinthians ganhe mais um mundial</strong></p>
-    <p><em>Corinthians ganhe mais um mundial</strong></p>
+    
+    <div class="glow-bg"></div>
 
+    <main class="container">
+        <section class="card-form glass-card">
+            <h2>Preencha os dados</h2>
+            
+            <div class="input-group">
+                <label>Nome</label>
+                <div class="input-wrapper">
+                    <input type="text" id="inputNome" placeholder="Digite seu nome">
+                    <i class="fas fa-user input-icon"></i>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label>Idade</label>
+                <div class="input-wrapper">
+                    <input type="number" id="inputIdade" placeholder="Digite sua idade">
+                    <i class="fas fa-id-card input-icon"></i>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label>Curso</label>
+                <div class="input-wrapper">
+                    <input type="text" id="inputCurso" placeholder="Ex: Sistemas">
+                    <i class="fas fa-graduation-cap input-icon"></i>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label>Cidade</label>
+                <div class="input-wrapper">
+                    <input type="text" id="inputCidade" placeholder="Ex: Curitiba - PR">
+                    <i class="fas fa-map-marker-alt input-icon"></i>
+                </div>
+            </div>
+            
+            <div class="center-btn">
+                <button onclick="gerarCartao()">Gerar cartão</button>
+            </div>
+            <p id="error-msg" class="error-msg" style="display: none;">Preencha todos os campos!</p>
+        </section>
+
+        <section class="display-card glass-card">
+            <div class="header-fill"></div>
+            <div class="profile-pic">
+                <img src="./img/1.png" alt="">
+            </div>
+            
+            <div class="card-content">
+                <h1 id="resNome">Ana e Nali</h1>
+                <h3 id="resIdade">18 anos</h3>
+                <hr>
+                <p><strong>Curso:</strong> <span id="resCurso">Desenvolvimento de Sistemas</span></p>
+                <p><strong>Cidade:</strong> <span id="resCidade">Curitiba - PR</span></p>
+                <p><strong>Membro desde:</strong> <span id="resData">Maio de 2026</span></p>
+                <hr>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
 </body>
 </html>

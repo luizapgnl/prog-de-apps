@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 3</title>
+</head>
+<body>
+    <label for=""> Cidade </label>
+    <input type ="text" id="inp_cidade" placeholder="Digite a sua cidade">
+    <button onclick="mostrar_cidade()">Clicar</button>
+
+    <p id="resultado"</p> 
+    <script>
+        function mostrar_cidade(){
+            let cidade = document.getElementById("inp_cidade"). value
+
+            document.getElementById("resultado").textContent = `A sua cidade é ${cidade}`
+
+        }
+    </script>
+</body>
+
+</html> 

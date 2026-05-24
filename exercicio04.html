@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 4</title>
+</head>
+<body>
+    <label for="">Nome<</label>
+    <input type="text" id="inp_nome" placeholder="Digite seu nome">
+    <label for="">Sobrenome</label>
+    <input type="text" id="inp_sobrenome" placeholder="Digite seu sobrenome">
+    <button onclick="mostrar_full_name()">Enviar</button>
+    <p id="resultado"></p>
+
+    <script>
+        function mostrar_full_name(){
+            let nome = document.getElementById("inp_nome").value
+            let sobrenome = document.getElementById("inp_sobrenome").value
+
+            document.getElementById("resultado").textContent = `Nome Complete: ${nome} ${sobrenome}`
+
+        }
+    </script>
+</body>
+</html>
